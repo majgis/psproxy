@@ -1,12 +1,12 @@
 # psproxy
 
-A simple way to toggle the proxy settings for Pulse Secure VPN.
+A simple way to toggle the proxy settings for Junos Pulse Secure VPN.
 
 This utility was created to solve the problem of [Charles Proxy][1](v3.10.2) not 
 working when connected to a VPN using [Junos Pulse Secure][2](v5.1.3) on 
 Mac OS X (v10.10.5).
 
-It has not been tested in any other environments or with other versions of the 
+It has not been tested in any other environments or with other versions of these 
 software. 
 
 ## Install
@@ -26,6 +26,9 @@ Remove the current proxy settings from Pulse Secure:
     sudo psproxy off
 
 ## Troubleshooting
+
+If you see one of the following error messages, follow the provided instructions
+to resolve the issue.
 
 * **No such key**
     * Junos Pulse Secure must be both running and securely connected to the VPN
