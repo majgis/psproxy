@@ -10,7 +10,7 @@ function psproxy(setting) {
 	else
 	  arg = '';
 
-	var childProcess = spawn('sh', ['bin/psproxy.sh', arg]);
+	var childProcess = spawn('sh', [__dirname + '/bin/psproxy.sh', arg]);
 	childProcess.stdout.pipe(process.stdout);
 }
 
