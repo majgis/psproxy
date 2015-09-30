@@ -1,6 +1,6 @@
 {
   "name": "psproxy",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Executable for enablling or disabling proxy settings for Junos Pulse Secure VPN",
   "main": "index.js",
   "scripts": {
