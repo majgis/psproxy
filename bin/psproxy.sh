@@ -10,8 +10,7 @@ serviceKey=`echo $juniperState | sed -n "s/.*DSUnderlyingServiceName : \([^']*\)
 
 if [ $1 == "on" ]; then
 		echo
-		echo "Turning the proxy on..."
-		echo
+		echo "Enabling proxy settings..."
 
 		results=`scutil<< EOF
   d.init
@@ -22,8 +21,7 @@ if [ $1 == "on" ]; then
 
 elif [ $1 == "off" ]; then
   echo
-  echo "Turning the proxy off..."
-  echo
+  echo "Disabling proxy settings..."
 
   results=`scutil<< EOF
   d.init
@@ -36,9 +34,8 @@ elif [ $1 == "off" ]; then
 
 else
   echo
-  echo "Execute 'psproxy on' to turn the proxy on"
-  echo "Execute 'psproxy off' to turn the proxy off"
-  echo
+  echo "Execute 'psproxy on' to enable the proxy settings"
+  echo "Execute 'psproxy off' to disable the proxy settings"
 
   exit
 fi

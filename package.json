@@ -1,0 +1,26 @@
+{
+  "name": "pulse-secure",
+  "version": "1.0.0",
+  "description": "Executable for enablling or disabling proxy settings for Pulse Secure VPN",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/majgis/psproxy.git"
+  },
+  "keywords": [
+    "pulse-secure",
+    "juniper"
+  ],
+  "author": "majgis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/majgis/psproxy/issues"
+  },
+  "homepage": "https://github.com/majgis/psproxy",
+  "bin": {
+    "psproxy": "bin/psproxy.bin.js"
+  }
+}
