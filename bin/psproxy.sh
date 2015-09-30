@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+# Toggle the proxy settings for Junos Pulse Secure
+# ./psproxy.sh on # To toggle proxy settings on
+# ./psproxy.sh off # To toggle proxy settings off
+#
+# Taken from https://gist.github.com/mivasi/bc0046aa2277a64726c8
+
 juniperState=`scutil << EOF
 show State:/Network/Service/net.juniper.pulse.nc.main/IPv4
 quit
