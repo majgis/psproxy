@@ -15,10 +15,10 @@ EOF`
 serviceKey=`echo $juniperState | sed -n "s/.*DSUnderlyingServiceName : \([^']*\) }.*/\1/p"`
 
 if [ $1 == "on" ]; then
-		echo
-		echo "Enabling proxy settings..."
+  echo
+  echo "Enabling proxy settings..."
 
-		results=`scutil<< EOF
+  results=`scutil<< EOF
   d.init
   get Setup:/Network/Service/${serviceKey}/Proxies
   set State:/Network/Service/net.juniper.pulse.nc.main/Proxies
