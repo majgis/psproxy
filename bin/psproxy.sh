@@ -6,13 +6,13 @@
 #
 # Taken from https://gist.github.com/mivasi/bc0046aa2277a64726c8
 
-juniperState=`scutil << EOF
-show State:/Network/Service/net.juniper.pulse.nc.main/IPv4
+pulseSecureState=`scutil << EOF
+show State:/Network/Service/net.pulsesecure.pulse.nc.main/IPv4
 quit
 EOF`
 
 
-serviceKey=`echo $juniperState | sed -n "s/.*DSUnderlyingServiceName : \([^']*\) }.*/\1/p"`
+serviceKey=`echo $pulseSecureState | sed -n "s/.*DSUnderlyingServiceName : \([^']*\) }.*/\1/p"`
 
 if [ $1 == "on" ]; then
   echo
@@ -21,7 +21,7 @@ if [ $1 == "on" ]; then
   results=`scutil<< EOF
   d.init
   get Setup:/Network/Service/${serviceKey}/Proxies
-  set State:/Network/Service/net.juniper.pulse.nc.main/Proxies
+  set State:/Network/Service/net.pulsesecure.pulse.nc.main/Proxies
   quit
   EOF`
 
@@ -31,10 +31,10 @@ elif [ $1 == "off" ]; then
 
   results=`scutil<< EOF
   d.init
-  get State:/Network/Service/net.juniper.pulse.nc.main/Proxies
+  get State:/Network/Service/net.pulsesecure.pulse.nc.main/Proxies
   d.add HTTPSEnable 0
   d.add HTTPEnable 0
-  set State:/Network/Service/net.juniper.pulse.nc.main/Proxies
+  set State:/Network/Service/net.pulsesecure.pulse.nc.main/Proxies
   quit
   EOF`
 
