@@ -16,11 +16,15 @@ version of Pulse Secure.  Install v1.x if you have the older
 
 ## Install
 
-Install this package globally:
+Install the latest package globally (Current Pulse Secure):
 
     npm i -g psproxy
     
+Install v1.x globally (Older Junos Pulse Secure):
+
+    npm i -g psproxy@1
     
+
 ## Usage
 Before executing this utility, make sure the following is in order
 
