@@ -11,6 +11,9 @@ show State:/Network/Service/net.pulsesecure.pulse.nc.main/IPv4
 quit
 EOF`
 
+GR='\033[0;32m'
+YL='\033[1;33m'
+NC='\033[0m' # No Color
 
 serviceKey=`echo $pulseSecureState | sed -n "s/.*DSUnderlyingServiceName : \([^']*\) }.*/\1/p"`
 
@@ -24,6 +27,7 @@ if [ $1 == "on" ]; then
   set State:/Network/Service/net.pulsesecure.pulse.nc.main/Proxies
   quit
   EOF`
+  echo "${GR}Done!${NC}"
 
 elif [ $1 == "off" ]; then
   echo
@@ -37,11 +41,12 @@ elif [ $1 == "off" ]; then
   set State:/Network/Service/net.pulsesecure.pulse.nc.main/Proxies
   quit
   EOF`
+  echo "${GR}Done!${NC}"
 
 else
   echo
-  echo "Execute 'psproxy on' to enable the proxy settings"
-  echo "Execute 'psproxy off' to disable the proxy settings"
+  echo "Execute ${YL}'sudo psproxy on'${NC} to enable the proxy settings"
+  echo "Execute ${YL}'sudo psproxy off'${NC} to disable the proxy settings"
 
   exit
 fi
