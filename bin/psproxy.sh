@@ -38,6 +38,7 @@ elif [ $1 == "off" ]; then
   get State:/Network/Service/net.pulsesecure.pulse.nc.main/Proxies
   d.add HTTPSEnable 0
   d.add HTTPEnable 0
+  d.add ProxyAutoConfigEnable 0
   set State:/Network/Service/net.pulsesecure.pulse.nc.main/Proxies
   quit
   EOF`
