@@ -15,7 +15,7 @@ GR='\033[0;32m'
 YL='\033[1;33m'
 NC='\033[0m' # No Color
 
-serviceKey=`echo $pulseSecureState | sed -n "s/.*DSUnderlyingServiceName : \([^']*\) }.*/\1/p"`
+serviceKey=`echo $pulseSecureState | sed -n "s/.*DSUnderlyingServiceName : \([A-Z0-9\-]*\).*/\1/p"`
 
 if [ $1 == "on" ]; then
   echo
